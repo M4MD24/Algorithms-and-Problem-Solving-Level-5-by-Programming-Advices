@@ -226,4 +226,30 @@ public:
         while (counter > 0)
             deleteFirst();
     }
+
+    void reverse() {
+        if (
+            head == nullptr ||
+            head->getNext() == nullptr
+        )
+            return;
+
+        Node<type> *current = head;
+        Node<type> *temporary = nullptr;
+
+        while (current != nullptr) {
+            temporary = current->getPrevious();
+            current->setPrevious(
+                current->getNext()
+            );
+            current->setNext(
+                temporary
+            );
+
+            current = current->getPrevious();
+        }
+
+        if (temporary != nullptr)
+            head = temporary->getPrevious();
+    }
 };

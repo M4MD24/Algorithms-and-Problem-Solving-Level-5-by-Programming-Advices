@@ -108,5 +108,47 @@ int main() {
 
     cout << "\n■ Is Empty?\n" << boolalpha << numbers.isEmpty() << endl;
 
+    cout << "\n■ After Clear Nodes:" << endl;
+
     numbers.clear();
+
+    numbers.printValues();
+
+    cout << "\n■ After Reverse Nodes:" << endl;
+
+    firstNode = new Node<short>(
+        11
+    );
+    secondNode = new Node<short>(
+        22
+    );
+    thirdNode = new Node<short>(
+        33
+    );
+    fourthNode = new Node<short>(
+        44
+    );
+    fifthNode = new Node<short>(
+        55
+    );
+
+    numbers.insertFirst(
+        firstNode
+    );
+    numbers.insertFirst(
+        secondNode
+    );
+    numbers.insertFirst(
+        thirdNode
+    );
+    numbers.insertFirst(
+        fourthNode
+    );
+    numbers.insertFirst(
+        fifthNode
+    );
+
+    numbers.reverse();
+
+    numbers.printValues();
 }
