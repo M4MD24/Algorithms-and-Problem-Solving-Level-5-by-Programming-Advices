@@ -12,3 +12,4 @@
     9. Delete Last Method
     10. Size Method
     11. Is Empty Method
+    12. Clear Method

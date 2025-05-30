@@ -106,14 +106,7 @@ int main() {
 
     cout << "\n■ Count of Nodes: " << numbers.size() << endl;
 
-    cout << "\n■ Is Empty?\n" << boolalpha << numbers.isEmpty() << endl)();
+    cout << "\n■ Is Empty?\n" << boolalpha << numbers.isEmpty() << endl;
 
-    delete firstNode;
-    delete secondNode;
-    delete thirdNode;
-    delete fifthNode;
-    delete nodeFound;
-    delete copyOfNodeFound;
-    delete sixthNode;
-    delete seventhNode;
+    numbers.clear();
 }

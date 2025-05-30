@@ -142,6 +142,8 @@ public:
                     nullptr
                 );
             --counter;
+
+            delete targetNode;
             return;
         }
 
@@ -159,6 +161,7 @@ public:
                 targetNode->getPrevious()
             );
 
+            delete targetNode;
             --counter;
         }
     }
@@ -182,6 +185,7 @@ public:
                 nullptr
             );
 
+        delete copyOfHead;
         --counter;
     }
 
@@ -192,8 +196,9 @@ public:
         }
 
         if (head->getNext() == nullptr) {
+            delete head;
             head = nullptr;
-            counter--;
+            --counter;
             return;
         }
 
@@ -201,9 +206,7 @@ public:
         while (current->getNext()->getNext() != nullptr)
             current = current->getNext();
 
-        current->getNext()->setPrevious(
-            nullptr
-        );
+        delete current->getNext();
         current->setNext(
             nullptr
         );
@@ -217,5 +220,10 @@ public:
 
     bool isEmpty() {
         return counter == 0;
+    }
+
+    void clear() {
+        while (counter > 0)
+            deleteFirst();
     }
 };
