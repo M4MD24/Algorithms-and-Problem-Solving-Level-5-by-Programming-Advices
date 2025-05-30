@@ -165,4 +165,12 @@ int main() {
             index
         )
     ) << endl;
+
+    index = 2;
+    cout << "\n■ Is Updated?\n" << boolalpha << numbers.updateItem(
+        index,
+        333
+    ) << endl;
+
+    numbers.printValues();
 }

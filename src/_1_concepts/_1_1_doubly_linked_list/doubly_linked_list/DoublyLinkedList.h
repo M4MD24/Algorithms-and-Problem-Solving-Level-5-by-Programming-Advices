@@ -253,7 +253,7 @@ public:
             head = temporary->getPrevious();
     }
 
-    Node<type>* getNode(
+    Node<type> *getNode(
         const size_t &INDEX
     ) {
         if (INDEX >= counter) {
@@ -285,5 +285,23 @@ public:
         if (targetNode == nullptr)
             return type();
         return targetNode->getValue();
+    }
+
+    bool updateItem(
+        const size_t &INDEX,
+        const type &VALUE
+    ) {
+        Node<type> *targetNode = getNode(
+            INDEX
+        );
+
+        if (targetNode != nullptr) {
+            targetNode->setValue(
+                VALUE
+            );
+            return true;
+        }
+
+        return false;
     }
 };
