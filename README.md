@@ -10,3 +10,4 @@
     7. Delete Node Method
     8. Delete First Method
     9. Delete Last Method
+    10. Size Method

@@ -104,6 +104,8 @@ int main() {
 
     numbers.printValues();
 
+    cout << "\n■ Count of Nodes: " << numbers.size() << endl;
+
     delete firstNode;
     delete secondNode;
     delete thirdNode;

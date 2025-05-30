@@ -6,6 +6,9 @@ template <typename type>
 class DoublyLinkedList {
     Node<type> *head = nullptr;
 
+protected:
+    size_t counter = 0;
+
 public:
     void insertFirst(
         Node<type> *node
@@ -19,6 +22,7 @@ public:
             );
         }
         head = node;
+        ++counter;
     }
 
     void printValues() {
@@ -83,6 +87,8 @@ public:
             nodeFound->setNext(
                 node
             );
+
+            ++counter;
         }
     }
 
@@ -114,6 +120,8 @@ public:
                 node
             );
         }
+
+        ++counter;
     }
 
     void deleteNode(
@@ -133,6 +141,7 @@ public:
                 head->setPrevious(
                     nullptr
                 );
+            --counter;
             return;
         }
 
@@ -149,6 +158,8 @@ public:
             targetNode->getNext()->setPrevious(
                 targetNode->getPrevious()
             );
+
+            --counter;
         }
     }
 
@@ -170,6 +181,8 @@ public:
             copyOfHead->setNext(
                 nullptr
             );
+
+        --counter;
     }
 
     void deleteLast() {
@@ -180,6 +193,7 @@ public:
 
         if (head->getNext() == nullptr) {
             head = nullptr;
+            counter--;
             return;
         }
 
@@ -193,5 +207,11 @@ public:
         current->setNext(
             nullptr
         );
+
+        --counter;
+    }
+
+    size_t size() {
+        return counter;
     }
 };
