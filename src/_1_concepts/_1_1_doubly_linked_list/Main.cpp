@@ -158,4 +158,11 @@ int main() {
             index
         )
     ) << endl;
+
+    index = 2;
+    cout << "\n■ Node Value of " << index << " is: " << to_string(
+        numbers.getItem(
+            index
+        )
+    ) << endl;
 }

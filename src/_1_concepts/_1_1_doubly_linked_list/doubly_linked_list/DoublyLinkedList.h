@@ -275,4 +275,15 @@ public:
 
         return nullptr;
     }
+
+    type getItem(
+        const size_t &INDEX
+    ) {
+        Node<type> *targetNode = getNode(
+            INDEX
+        );
+        if (targetNode == nullptr)
+            return type();
+        return targetNode->getValue();
+    }
 };
