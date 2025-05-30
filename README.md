@@ -1,1 +1,12 @@
 # Algorithms & Problem-Solving Level 5
+
+1. [Doubly Linked List](src/_1_concepts/_1_1_doubly_linked_list)
+    1. Insert First Method
+    2. Print Values Method
+    3. Print Values Backward Method
+    4. Find Node Method
+    5. Insert After Method
+    6. Insert Last Method
+    7. Delete Node Method
+    8. Delete First Method
+    9. Delete Last Method
