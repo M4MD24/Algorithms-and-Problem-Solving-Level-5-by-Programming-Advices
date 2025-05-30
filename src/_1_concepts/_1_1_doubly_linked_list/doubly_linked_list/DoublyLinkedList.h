@@ -214,4 +214,8 @@ public:
     size_t size() {
         return counter;
     }
+
+    bool isEmpty() {
+        return counter == 0;
+    }
 };
