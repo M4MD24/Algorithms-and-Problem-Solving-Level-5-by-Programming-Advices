@@ -304,4 +304,24 @@ public:
 
         return false;
     }
+
+    void insertAfter(
+        const size_t &INDEX,
+        const type &VALUE
+    ) {
+        if (
+            Node<type> *previousNode = getNode(
+                INDEX
+            );
+            previousNode == nullptr
+        )
+            cout << "Can't Insert After. Index out of range." << endl;
+        else
+            insertAfter(
+                previousNode,
+                new Node<type>(
+                    VALUE
+                )
+            );
+    }
 };

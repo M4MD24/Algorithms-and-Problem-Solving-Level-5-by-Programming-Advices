@@ -173,4 +173,15 @@ int main() {
     ) << endl;
 
     numbers.printValues();
+
+    index = 3;
+    constexpr short VALUE = 666;
+    cout << "\n■ After Insert After by Index:" << endl;
+
+    numbers.insertAfter(
+        index,
+        VALUE
+    );
+
+    numbers.printValues();
 }

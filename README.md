@@ -14,6 +14,7 @@
     11. Is Empty Method
     12. Clear Method
     13. Reverse Method
-    14. Get Node
-    15. Get Item
-    16. Update Item
+    14. Get Node by Index
+    15. Get Item by Index
+    16. Update Item by Index
+    17. Insert Value After by Index Method
