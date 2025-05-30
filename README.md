@@ -1,6 +1,6 @@
 # Algorithms & Problem-Solving Level 5
 
-1. [Doubly Linked List](src/_1_concepts/_1_1_doubly_linked_list)
+1. [Doubly Linked List](src/_1_doubly_linked_list)
     1. Insert First Method
     2. Print Values Method
     3. Print Values Backward Method
