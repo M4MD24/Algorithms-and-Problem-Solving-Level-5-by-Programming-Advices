@@ -151,4 +151,11 @@ int main() {
     numbers.reverse();
 
     numbers.printValues();
+
+    size_t index = 2;
+    cout << "\n■ Node of " << index << " is: " << to_string(
+        numbers.getItem(
+            index
+        )
+    ) << endl;
 }

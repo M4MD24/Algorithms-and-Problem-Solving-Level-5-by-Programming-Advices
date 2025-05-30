@@ -14,3 +14,4 @@
     11. Is Empty Method
     12. Clear Method
     13. Reverse Method
+    14. Get Node by Index Method

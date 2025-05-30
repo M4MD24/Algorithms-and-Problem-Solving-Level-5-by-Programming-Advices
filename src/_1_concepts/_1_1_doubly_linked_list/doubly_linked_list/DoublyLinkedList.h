@@ -252,4 +252,27 @@ public:
         if (temporary != nullptr)
             head = temporary->getPrevious();
     }
+
+    Node<type>* getNode(
+        const size_t &INDEX
+    ) {
+        if (INDEX >= counter) {
+            cout << "Index out of range." << endl;
+            return nullptr;
+        }
+
+        Node<type> *current = head;
+        size_t currentIndex = 0;
+
+        while (
+            current != nullptr &&
+            currentIndex++ < INDEX
+        )
+            current = current->getNext();
+
+        if (current != nullptr)
+            return current;
+
+        return nullptr;
+    }
 };
