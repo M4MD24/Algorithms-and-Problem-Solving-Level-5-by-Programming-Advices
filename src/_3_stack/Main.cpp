@@ -51,4 +51,22 @@ int main() {
     cout << "\n■ After Clear:" << endl;
     values.clear();
     values.printValues();
+
+    cout << "■ After Insert Last:" << endl;
+    values.insertLast(
+        10
+    );
+    values.insertLast(
+        20
+    );
+    values.insertLast(
+        30
+    );
+    values.insertLast(
+        40
+    );
+    values.insertLast(
+        50
+    );
+    values.printValues();
 }

@@ -119,4 +119,23 @@ public:
             pop();
         counter = 0;
     }
+
+    void insertLast(
+        const type &VALUE
+    ) {
+        auto *newNode = new Node<type>(
+            VALUE
+        );
+        if (!head)
+            head = newNode;
+        else {
+            Node<type> *current = head;
+            while (current->getNext())
+                current = current->getNext();
+            current->setNext(
+                newNode
+            );
+        }
+        counter++;
+    }
 };
