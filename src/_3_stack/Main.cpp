@@ -5,6 +5,7 @@ using namespace std;
 int main() {
     Stack<short> values;
 
+    cout << "■ After Push:" << endl;
     values.push(
         10
     );
@@ -22,4 +23,6 @@ int main() {
     );
 
     values.printValues();
+
+    cout << "\n■ Is Empty?\n" << boolalpha <<  values.isEmpty() << endl;
 }

@@ -32,4 +32,8 @@ public:
         }
         cout << endl;
     }
+
+    bool isEmpty() {
+        return counter == 0;
+    }
 };

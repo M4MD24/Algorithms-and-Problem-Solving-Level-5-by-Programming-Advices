@@ -36,3 +36,4 @@
 3. [Stack](src/_3_stack)
     1. Push Method
     2. Print Values Method
+    3. Size Method
