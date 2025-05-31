@@ -138,4 +138,26 @@ public:
         }
         counter++;
     }
+
+    bool insertAfter(
+        const size_t &INDEX,
+        const type &VALUE
+    ) {
+        Node<type> *targetNode = findNode(
+            INDEX
+        );
+        if (!targetNode)
+            return false;
+        auto *newNode = new Node<type>(
+            VALUE
+        );
+        newNode->setNext(
+            targetNode->getNext()
+        );
+        targetNode->setNext(
+            newNode
+        );
+        counter++;
+        return true;
+    }
 };

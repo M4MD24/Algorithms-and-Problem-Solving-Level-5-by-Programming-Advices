@@ -52,7 +52,7 @@ int main() {
     values.clear();
     values.printValues();
 
-    cout << "■ After Insert Last:" << endl;
+    cout << "\n■ After Insert Last:" << endl;
     values.insertLast(
         10
     );
@@ -68,5 +68,11 @@ int main() {
     values.insertLast(
         50
     );
+    values.printValues();
+
+    cout << "\n■ After Insert After:" << endl << values.insertAfter(
+        4,
+        666
+    ) << endl;
     values.printValues();
 }

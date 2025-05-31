@@ -46,3 +46,4 @@
     10. Update Item by Index Method
     11. Clear Method
     12. Insert After Method
+    13. Insert Last Method
