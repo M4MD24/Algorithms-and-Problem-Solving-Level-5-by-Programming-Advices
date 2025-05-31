@@ -9,6 +9,18 @@ class Stack {
 protected:
     size_t counter = 0;
 
+    Node<type> *findNode(
+        const size_t &INDEX
+    ) {
+        if (INDEX >= counter)
+            return nullptr;
+
+        Node<type> *current = head;
+        for (size_t index = 0; index < INDEX; ++index)
+            current = current->getNext();
+        return current;
+    }
+
 public:
     void push(
         const type &VALUE
@@ -59,5 +71,15 @@ public:
             delete TEMPORARY;
             counter--;
         }
+    }
+
+    type getItem(
+        const size_t &INDEX
+    ) {
+        if (INDEX >= counter)
+            return type();
+        return findNode(
+            INDEX
+        )->getValue();
     }
 };

@@ -32,4 +32,9 @@ int main() {
     cout << "\n■ After Pop:" << endl;
     values.pop();
     values.printValues();
+
+    cout << "\n■ Get Item: " <<
+        values.getItem(
+            2
+        ) << endl;
 }

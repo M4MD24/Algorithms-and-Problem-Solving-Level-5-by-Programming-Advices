@@ -40,3 +40,5 @@
     4. Top Value Method
     5. Bottom Value Method
     6. Pop Method
+    7. Find Node by Index Method
+    8. Get Item by Index Method
