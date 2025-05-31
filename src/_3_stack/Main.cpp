@@ -20,4 +20,6 @@ int main() {
     values.push(
         50
     );
+
+    values.printValues();
 }

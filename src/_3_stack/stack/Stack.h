@@ -22,4 +22,14 @@ public:
         top = newNode;
         counter++;
     }
+
+    void printValues() {
+        cout << "Values: ";
+        Node<type> *current = top;
+        while (current) {
+            cout << current->getValue() << ' ';
+            current = current->getNext();
+        }
+        cout << endl;
+    }
 };
