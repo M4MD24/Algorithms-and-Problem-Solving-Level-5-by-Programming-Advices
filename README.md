@@ -42,3 +42,4 @@
     6. Pop Method
     7. Find Node by Index Method
     8. Get Item by Index Method
+    9. Reverse Method

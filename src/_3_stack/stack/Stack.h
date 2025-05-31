@@ -82,4 +82,21 @@ public:
             INDEX
         )->getValue();
     }
+
+    void reverse() {
+        Node<type> *previous = nullptr,
+                   *current = head,
+                   *next = nullptr;
+
+        while (current) {
+            next = current->getNext();
+            current->setNext(
+                previous
+            );
+            previous = current;
+            current = next;
+        }
+
+        head = previous;
+    }
 };

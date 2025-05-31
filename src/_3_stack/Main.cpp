@@ -37,4 +37,8 @@ int main() {
         values.getItem(
             2
         ) << endl;
+
+    cout << "\n■ After Reverse:" << endl;
+    values.reverse();
+    values.printValues();
 }
