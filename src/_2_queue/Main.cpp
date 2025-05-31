@@ -53,4 +53,8 @@ int main() {
     cout << "\n■ After Reverse Nodes:" << endl;
     values.reverse();
     values.printValues();
+
+    cout << "\n■ After Clear Nodes:" << endl;
+    values.clear();
+    values.printValues();
 }

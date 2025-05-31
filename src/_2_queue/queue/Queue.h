@@ -135,4 +135,14 @@ public:
 
         head = previous;
     }
+
+    void clear() {
+        while (head) {
+            const Node<type>* TEMPORARY = head;
+            head = head->getNext();
+            delete TEMPORARY;
+        }
+        tail = nullptr;
+        counter = 0;
+    }
 };

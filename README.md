@@ -30,3 +30,4 @@
     9. Get Item by Index Method
     10. Update Item by Index Method
     11. Reverse Method
+    12. Clear Method
