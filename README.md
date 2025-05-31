@@ -33,3 +33,5 @@
     12. Clear Method
     13. Insert First Method
     14. Insert After Method
+3. [Stack](src/_3_stack)
+    1. Push Method
