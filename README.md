@@ -18,3 +18,18 @@
     15. Get Item by Index
     16. Update Item by Index
     17. Insert Value After by Index Method
+2. [Queue](src/_2_queue)
+    1. Enqueue Method
+    2. Dequeue Method
+    3. Size Method
+    4. Print Values Method
+    5. Front Value Method
+    6. Rear (Back) Value Method
+    7. Is Empty Method
+    8. Find Node Method
+    9. Get Item by Index Method
+    10. Update Item by Index Method
+    11. Reverse Method
+    12. Clear Method
+    13. Insert First Method
+    14. Insert After Method
