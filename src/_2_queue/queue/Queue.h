@@ -10,6 +10,18 @@ class Queue {
 protected:
     size_t counter = 0;
 
+    Node<type> *findNode(
+        const size_t &INDEX
+    ) {
+        if (INDEX >= counter)
+            return nullptr;
+
+        Node<type> *current = head;
+        for (size_t index = 0; index < INDEX; ++index)
+            current = current->getNext();
+        return current;
+    }
+
 public:
     void enqueue(
         const type &VALUE
@@ -69,5 +81,17 @@ public:
 
     bool isEmpty() {
         return counter == 0;
+    }
+
+    type getItem(
+        const size_t &INDEX
+    ) {
+        Node<type> *current = findNode(
+            INDEX
+        );
+
+        return current != nullptr
+                   ? current->getValue()
+                   : type();
     }
 };

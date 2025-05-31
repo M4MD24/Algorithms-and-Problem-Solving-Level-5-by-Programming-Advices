@@ -39,4 +39,8 @@ int main() {
     cout << "\n■ Rear (Back) Value: " << values.rear() << endl;
 
     cout << "\n■ Is Empty?\n" << boolalpha << values.isEmpty() << endl;
+
+    cout << "\n■ Get Item: " << values.getItem(
+        1
+    ) << endl;
 }

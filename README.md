@@ -26,3 +26,5 @@
     5. Front Value Method
     6. Rear (Back) Value Method
     7. Is Empty
+    8. Find Node Method
+    9. Get Item by Index Method
