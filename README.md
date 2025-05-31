@@ -38,3 +38,4 @@
     2. Print Values Method
     3. Size Method
     4. Top Value Method
+    5. Bottom Value Method

@@ -27,4 +27,6 @@ int main() {
     cout << "\n■ Is Empty?\n" << boolalpha << values.isEmpty() << endl;
 
     cout << "\n■ Top = " << values.top() << endl;
+
+    cout << "\n■ Bottom = " << values.bottom() << endl;
 }

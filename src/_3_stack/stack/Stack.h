@@ -42,4 +42,13 @@ public:
             return type();
         return head->getValue();
     }
+
+    type bottom() {
+        if (!head)
+            return type();
+        Node<type>* current = head;
+        while (current->getNext())
+            current = current->getNext();
+        return current->getValue();
+    }
 };
