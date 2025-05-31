@@ -14,7 +14,6 @@ protected:
     ) {
         if (INDEX >= counter)
             return nullptr;
-
         Node<type> *current = head;
         for (size_t index = 0; index < INDEX; ++index)
             current = current->getNext();
@@ -98,5 +97,20 @@ public:
         }
 
         head = previous;
+    }
+
+    bool updateItem(
+        const size_t &INDEX,
+        const type &VALUE
+    ) {
+        Node<type> *node = findNode(
+            INDEX
+        );
+        if (!node)
+            return false;
+        node->setValue(
+            VALUE
+        );
+        return true;
     }
 };

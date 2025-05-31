@@ -41,4 +41,10 @@ int main() {
     cout << "\n■ After Reverse:" << endl;
     values.reverse();
     values.printValues();
+
+    cout << "\n■ After Update Item:" << endl << boolalpha << values.updateItem(
+        1,
+        22
+    ) << endl;
+    values.printValues();
 }

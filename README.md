@@ -43,3 +43,4 @@
     7. Find Node by Index Method
     8. Get Item by Index Method
     9. Reverse Method
+    10. Update Item by Index Method
