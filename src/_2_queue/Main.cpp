@@ -43,4 +43,11 @@ int main() {
     cout << "\n■ Get Item: " << values.getItem(
         1
     ) << endl;
+
+    cout << "\n■ Update Item?\n" << boolalpha << values.updateItem(
+        2,
+        22
+    ) << endl;
+
+    values.printValues();
 }

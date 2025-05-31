@@ -94,4 +94,21 @@ public:
                    ? current->getValue()
                    : type();
     }
+
+    bool updateItem(
+        const size_t &INDEX,
+        const type &NEW_VALUE
+    ) {
+        if (
+            Node<type> *current = findNode(
+                INDEX
+            )
+        ) {
+            current->setValue(
+                NEW_VALUE
+            );
+            return true;
+        }
+        return false;
+    }
 };
