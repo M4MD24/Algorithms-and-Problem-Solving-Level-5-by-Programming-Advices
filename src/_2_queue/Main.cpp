@@ -71,4 +71,11 @@ int main() {
         50
     );
     values.printValues();
+
+    cout << "\n■ After Insert After Node:" << endl;
+    values.insertAfter(
+        1,
+        666
+    );
+    values.printValues();
 }

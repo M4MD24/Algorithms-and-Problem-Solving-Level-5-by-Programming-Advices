@@ -160,4 +160,29 @@ public:
             tail = newNode;
         counter++;
     }
+
+    bool insertAfter(
+        const size_t &INDEX,
+        const type &VALUE
+    ) {
+        Node<type> *current = findNode(
+            INDEX
+        );
+        if (!current)
+            return false;
+
+        auto *newNode = new Node<type>(
+            VALUE
+        );
+        newNode->setNext(
+            current->getNext()
+        );
+        current->setNext(
+            newNode
+        );
+        if (current == tail)
+            tail = newNode;
+        counter++;
+        return true;
+    }
 };
