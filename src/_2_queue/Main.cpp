@@ -6,7 +6,6 @@ int main() {
     Queue<short> values;
 
     cout << "■ After Enqueue Values: " << endl;
-
     values.enqueue(
         10
     );
@@ -22,14 +21,11 @@ int main() {
     values.enqueue(
         50
     );
-
     values.printValues();
 
     cout << "\n■ After Dequeue Values: " << endl;
-
     values.dequeue();
     values.dequeue();
-
     values.printValues();
 
     cout << "\n■ Count of Values: " << values.size() << endl;
@@ -56,5 +52,23 @@ int main() {
 
     cout << "\n■ After Clear Nodes:" << endl;
     values.clear();
+    values.printValues();
+
+    cout << "\n■ After Insert First Nodes:" << endl;
+    values.insertFirst(
+        10
+    );
+    values.insertFirst(
+        20
+    );
+    values.insertFirst(
+        30
+    );
+    values.insertFirst(
+        40
+    );
+    values.insertFirst(
+        50
+    );
     values.printValues();
 }

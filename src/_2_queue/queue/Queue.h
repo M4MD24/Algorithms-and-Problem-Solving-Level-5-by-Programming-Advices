@@ -138,11 +138,26 @@ public:
 
     void clear() {
         while (head) {
-            const Node<type>* TEMPORARY = head;
+            const Node<type> *TEMPORARY = head;
             head = head->getNext();
             delete TEMPORARY;
         }
         tail = nullptr;
         counter = 0;
+    }
+
+    void insertFirst(
+        const type &VALUE
+    ) {
+        auto *newNode = new Node<type>(
+            VALUE
+        );
+        newNode->setNext(
+            head
+        );
+        head = newNode;
+        if (!tail)
+            tail = newNode;
+        counter++;
     }
 };
