@@ -111,4 +111,28 @@ public:
         }
         return false;
     }
+
+    void reverse() {
+        if (
+            !head ||
+            !head->getNext()
+        )
+            return;
+
+        Node<type> *previous = nullptr;
+        Node<type> *current = head;
+        Node<type> *next = nullptr;
+        tail = head;
+
+        while (current) {
+            next = current->getNext();
+            current->setNext(
+                previous
+            );
+            previous = current;
+            current = next;
+        }
+
+        head = previous;
+    }
 };

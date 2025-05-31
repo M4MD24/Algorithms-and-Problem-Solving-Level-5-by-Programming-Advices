@@ -48,6 +48,9 @@ int main() {
         2,
         22
     ) << endl;
+    values.printValues();
 
+    cout << "\n■ After Reverse Nodes:" << endl;
+    values.reverse();
     values.printValues();
 }
