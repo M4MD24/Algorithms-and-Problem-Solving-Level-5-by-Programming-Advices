@@ -113,4 +113,10 @@ public:
         );
         return true;
     }
+
+    void clear() {
+        while (head)
+            pop();
+        counter = 0;
+    }
 };

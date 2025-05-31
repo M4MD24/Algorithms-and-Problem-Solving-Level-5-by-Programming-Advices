@@ -47,4 +47,8 @@ int main() {
         22
     ) << endl;
     values.printValues();
+
+    cout << "\n■ After Clear:" << endl;
+    values.clear();
+    values.printValues();
 }

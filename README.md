@@ -44,3 +44,4 @@
     8. Get Item by Index Method
     9. Reverse Method
     10. Update Item by Index Method
+    11. Clear Method
