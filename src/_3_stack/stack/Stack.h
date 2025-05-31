@@ -4,7 +4,7 @@ using namespace std;
 
 template <typename type>
 class Stack {
-    Node<type> *top = nullptr;
+    Node<type> *head = nullptr;
 
 protected:
     size_t counter = 0;
@@ -17,15 +17,15 @@ public:
             VALUE
         );
         newNode->setNext(
-            top
+            head
         );
-        top = newNode;
+        head = newNode;
         counter++;
     }
 
     void printValues() {
         cout << "Values: ";
-        Node<type> *current = top;
+        Node<type> *current = head;
         while (current) {
             cout << current->getValue() << ' ';
             current = current->getNext();
@@ -35,5 +35,11 @@ public:
 
     bool isEmpty() {
         return counter == 0;
+    }
+
+    type top() {
+        if (!head)
+            return type();
+        return head->getValue();
     }
 };

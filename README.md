@@ -37,3 +37,4 @@
     1. Push Method
     2. Print Values Method
     3. Size Method
+    4. Top Value Method
