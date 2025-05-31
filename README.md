@@ -33,3 +33,17 @@
     12. Clear Method
     13. Insert First Method
     14. Insert After Method
+3. [Stack](src/_3_stack)
+    1. Push Method
+    2. Print Values Method
+    3. Size Method
+    4. Top Value Method
+    5. Bottom Value Method
+    6. Pop Method
+    7. Find Node by Index Method
+    8. Get Item by Index Method
+    9. Reverse Method
+    10. Update Item by Index Method
+    11. Clear Method
+    12. Insert After Method
+    13. Insert Last Method
