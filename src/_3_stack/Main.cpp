@@ -21,7 +21,6 @@ int main() {
     values.push(
         50
     );
-
     values.printValues();
 
     cout << "\n■ Is Empty?\n" << boolalpha << values.isEmpty() << endl;
@@ -29,4 +28,8 @@ int main() {
     cout << "\n■ Top = " << values.top() << endl;
 
     cout << "\n■ Bottom = " << values.bottom() << endl;
+
+    cout << "\n■ After Pop:" << endl;
+    values.pop();
+    values.printValues();
 }

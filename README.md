@@ -39,3 +39,4 @@
     3. Size Method
     4. Top Value Method
     5. Bottom Value Method
+    6. Pop Method

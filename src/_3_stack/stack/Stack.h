@@ -46,9 +46,18 @@ public:
     type bottom() {
         if (!head)
             return type();
-        Node<type>* current = head;
+        Node<type> *current = head;
         while (current->getNext())
             current = current->getNext();
         return current->getValue();
+    }
+
+    void pop() {
+        if (head) {
+            const Node<type> *TEMPORARY = head;
+            head = head->getNext();
+            delete TEMPORARY;
+            counter--;
+        }
     }
 };
