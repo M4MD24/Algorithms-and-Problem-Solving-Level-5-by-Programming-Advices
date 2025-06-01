@@ -47,3 +47,11 @@
     11. Clear Method
     12. Insert After Method
     13. Insert Last Method
+4. [Dynamic Array](src/_4_dynamic_array)
+   1. Set Item Method
+   2. Print Values Method
+   3. Is Empty Method
+   4. Get Size Method
+   5. Get Capacity Method
+   6. Shrink to Fit Method
+   7. Resize Method
