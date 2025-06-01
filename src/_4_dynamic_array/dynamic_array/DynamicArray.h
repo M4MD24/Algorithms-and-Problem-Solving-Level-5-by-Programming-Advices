@@ -4,7 +4,7 @@ using namespace std;
 
 template <typename type>
 class DynamicArray {
-    type *values = nullptr;
+    type *originalValues = nullptr;
 
 protected:
     size_t size = 0;
@@ -15,7 +15,7 @@ public:
         const size_t &INITIAL_CAPACITY = 2
     ) {
         capacity = INITIAL_CAPACITY;
-        values = new type[capacity];
+        originalValues = new type[capacity];
         size = 0;
     }
 
@@ -29,9 +29,9 @@ public:
 
         type *new_values = new type[NEW_CAPACITY];
         for (size_t index = 0; index < size; ++index)
-            new_values[index] = values[index];
-        delete[] values;
-        values = new_values;
+            new_values[index] = originalValues[index];
+        delete[] originalValues;
+        originalValues = new_values;
         capacity = NEW_CAPACITY;
     }
 
@@ -48,9 +48,9 @@ public:
                 resize(
                     capacity * 2
                 );
-            values[size++] = VALUE;
+            originalValues[size++] = VALUE;
         } else
-            values[INDEX] = VALUE;
+            originalValues[INDEX] = VALUE;
     }
 
     bool isEmpty() {
@@ -68,7 +68,7 @@ public:
     void printValues() {
         cout << "Values: ";
         for (size_t index = 0; index < size; ++index)
-            cout << values[index] << ' ';
+            cout << originalValues[index] << ' ';
         cout << endl;
     }
 
@@ -79,7 +79,14 @@ public:
             );
     }
 
+    void clear() {
+        size = 0;
+        capacity = 2;
+        delete[] originalValues;
+        originalValues = new type[0];
+    }
+
     ~DynamicArray() {
-        delete[] values;
+        delete[] originalValues;
     }
 };

@@ -4,9 +4,8 @@
 using namespace std;
 
 int main() {
-    DynamicArray<short> values(
-        10
-    );
+    DynamicArray<short> values;
+    values.printValues();
 
     cout << "■ After Set Items:" << endl;
     values.setItem(
@@ -47,5 +46,7 @@ int main() {
     );
     values.printValues();
 
-
+    cout << "\n■ After Clear:" << endl;
+    values.clear();
+    values.printValues();
 }
