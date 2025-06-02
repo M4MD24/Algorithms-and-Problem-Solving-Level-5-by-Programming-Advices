@@ -87,4 +87,8 @@ int main() {
         3
     );
     values.printValues();
+
+    cout << "\n■ After Delete First: " << endl;
+    values.deleteFirst();
+    values.printValues();
 }

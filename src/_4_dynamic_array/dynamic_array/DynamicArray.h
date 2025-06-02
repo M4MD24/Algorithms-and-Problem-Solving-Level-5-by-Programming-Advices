@@ -40,7 +40,7 @@ public:
         const type &VALUE
     ) {
         if (INDEX > size) {
-            cout << "Index out of range\n";
+            cout << "Index out of range.\n";
             return;
         }
         if (INDEX == size) {
@@ -90,7 +90,7 @@ public:
         const size_t &INDEX
     ) {
         if (INDEX >= size) {
-            cout << "Index out of range\n";
+            cout << "Index out of range.\n";
             return type();
         }
         return originalValues[INDEX];
@@ -108,10 +108,20 @@ public:
         const size_t &INDEX
     ) {
         if (INDEX >= size) {
-            cout << "Index out of range\n";
+            cout << "Index out of range.\n";
             return;
         }
         for (size_t index = INDEX; index < size - 1; ++index)
+            originalValues[index] = originalValues[index + 1];
+        --size;
+    }
+
+    void deleteFirst() {
+        if (size == 0) {
+            cout << "Can't Delete First.\n";
+            return;
+        }
+        for (size_t index = 0; index < size - 1; ++index)
             originalValues[index] = originalValues[index + 1];
         --size;
     }

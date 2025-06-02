@@ -59,3 +59,4 @@
    9. Get Item Method
    10. Reverse
    11. Delete Item
+   12. Delete First
