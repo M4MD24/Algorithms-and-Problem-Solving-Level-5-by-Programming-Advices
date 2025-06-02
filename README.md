@@ -1,6 +1,6 @@
 # Algorithms & Problem-Solving Level 5
 
-1. [Doubly Linked List](src/_1_doubly_linked_list)
+1. [Doubly Linked List Data Structure](src/_1_doubly_linked_list_data_structure)
     1. Insert First Method
     2. Print Values Method
     3. Print Values Backward Method
@@ -18,7 +18,7 @@
     15. Get Item by Index
     16. Update Item by Index
     17. Insert Value After by Index Method
-2. [Queue](src/_2_queue)
+2. [Queue Data Structure](src/_2_queue_data_structure)
     1. Enqueue Method
     2. Dequeue Method
     3. Size Method
@@ -33,7 +33,7 @@
     12. Clear Method
     13. Insert First Method
     14. Insert After Method
-3. [Stack](src/_3_stack)
+3. [Stack Data Structure](src/_3_stack_data_structure)
     1. Push Method
     2. Print Values Method
     3. Size Method
@@ -47,7 +47,7 @@
     11. Clear Method
     12. Insert After Method
     13. Insert Last Method
-4. [Dynamic Array](src/_4_dynamic_array)
+4. [Dynamic Array Data Structure](src/_4_dynamic_array_data_structure)
     1. Set Item Method
     2. Print Values Method
     3. Is Empty Method
