@@ -72,3 +72,4 @@
     1. Set Value
     2. Get Value
     3. Undo
+    4. Redo

@@ -38,4 +38,16 @@ public:
         }
         return false;
     }
+
+    bool redo() {
+        if (!redoValues.empty()) {
+            undoValues.push(
+                value
+            );
+            value = redoValues.top();
+            redoValues.pop();
+            return true;
+        }
+        return false;
+    }
 };
