@@ -144,6 +144,24 @@ public:
         return type();
     }
 
+    bool deleteItemByValue(
+        const type &VALUE
+    ) {
+        if (
+            size_t index = findItem(
+                VALUE
+            );
+            index == type()
+        )
+            return false;
+        else {
+            deleteItem(
+                index
+            );
+            return true;
+        }
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }

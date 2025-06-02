@@ -62,3 +62,4 @@
    12. Delete First
    13. Delete Last
    14. Find Item
+   15. Find Item by Value

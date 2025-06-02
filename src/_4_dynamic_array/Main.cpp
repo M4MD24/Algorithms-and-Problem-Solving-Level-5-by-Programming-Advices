@@ -5,7 +5,6 @@ using namespace std;
 
 int main() {
     DynamicArray<short> values;
-    values.printValues();
 
     cout << "■ After Set Items:" << endl;
     values.setItem(
@@ -94,5 +93,14 @@ int main() {
 
     cout << "\n■ After Delete Last: " << endl;
     values.deleteLast();
+    values.printValues();
+
+    cout << "\n■ Find Item: " << values.findItem(
+        30
+    ) << endl;
+
+    cout << "\n■ Delete Item By Value: " << values.deleteItemByValue(
+        30
+    ) << endl;
     values.printValues();
 }
