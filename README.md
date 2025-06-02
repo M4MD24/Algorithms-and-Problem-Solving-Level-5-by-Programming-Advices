@@ -70,3 +70,4 @@
     20. Insert Last Method
 5. [Call Stack](src/_5_call_stack)
     1. Set Value
+    2. Get Value

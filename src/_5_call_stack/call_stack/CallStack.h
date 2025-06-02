@@ -22,4 +22,8 @@ public:
                 redoValues.pop();
         }
     }
+
+    type getValue() {
+        return value;
+    }
 };

@@ -15,4 +15,6 @@ int main() {
     values.setValue(
         "Third"
     );
+
+    cout << "Current Value: " << values.getValue() << endl;
 }
