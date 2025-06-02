@@ -121,9 +121,9 @@ public:
             cout << "Can't Delete First.\n";
             return;
         }
-        for (size_t index = 0; index < size - 1; ++index)
-            originalValues[index] = originalValues[index + 1];
-        --size;
+        deleteItem(
+            0
+        );
     }
 
     void deleteLast() {
