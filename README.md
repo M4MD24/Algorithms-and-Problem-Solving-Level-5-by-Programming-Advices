@@ -67,3 +67,4 @@
     17. Insert After Method
     18. Insert Before Method
     19. Insert First Method
+    20. Insert Last Method

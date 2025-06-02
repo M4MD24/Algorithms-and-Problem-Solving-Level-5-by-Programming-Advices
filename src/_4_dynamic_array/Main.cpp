@@ -149,4 +149,10 @@ int main() {
         90
     );
     values.printValues();
+
+    cout << "\n■ Insert Last:" << endl;
+    values.insertLast(
+        100
+    );
+    values.printValues();
 }

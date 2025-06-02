@@ -213,6 +213,15 @@ public:
         );
     }
 
+    void insertLast(
+        const type &VALUE
+    ) {
+        insertAt(
+            size,
+            VALUE
+        );
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }
