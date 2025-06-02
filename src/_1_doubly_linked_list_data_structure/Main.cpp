@@ -1,6 +1,6 @@
 #include <iostream>
-#include "doubly_linked_list//Node.h"
-#include "doubly_linked_list/DoublyLinkedList.h"
+#include "doubly_linked_list_data_structure//Node.h"
+#include "doubly_linked_list_data_structure/DoublyLinkedList.h"
 using namespace std;
 
 int main() {

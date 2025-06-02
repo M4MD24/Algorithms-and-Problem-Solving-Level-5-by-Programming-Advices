@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "dynamic_array/DynamicArray.h"
+#include "dynamic_array_data_structure/DynamicArray.h"
 using namespace std;
 
 int main() {

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "queue/Queue.h"
+#include "queue_data_structure/Queue.h"
 using namespace std;
 
 int main() {
