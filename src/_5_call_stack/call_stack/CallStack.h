@@ -26,4 +26,16 @@ public:
     type getValue() {
         return value;
     }
+
+    bool undo() {
+        if (!undoValues.empty()) {
+            redoValues.push(
+                value
+            );
+            value = undoValues.top();
+            undoValues.pop();
+            return true;
+        }
+        return false;
+    }
 };

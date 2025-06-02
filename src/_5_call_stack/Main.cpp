@@ -17,4 +17,7 @@ int main() {
     );
 
     cout << "Current Value: " << values.getValue() << endl;
+
+    cout << "\nAfter Undo: " << boolalpha << values.undo() << endl;
+    cout << "Current Value: " << values.getValue() << endl;
 }
