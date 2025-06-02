@@ -56,3 +56,4 @@
    6. Shrink to Fit Method
    7. Resize Method
    8. Clear Method
+   9. Get Item Method

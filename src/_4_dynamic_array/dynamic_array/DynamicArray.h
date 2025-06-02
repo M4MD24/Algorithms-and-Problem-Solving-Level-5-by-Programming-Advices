@@ -86,6 +86,16 @@ public:
         originalValues = new type[0];
     }
 
+    type getItem(
+        const size_t &INDEX
+    ) {
+        if (INDEX >= size) {
+            cout << "Index out of range\n";
+            return type();
+        }
+        return originalValues[INDEX];
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }
