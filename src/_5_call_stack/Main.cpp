@@ -21,6 +21,10 @@ int main() {
     cout << "\nAfter Undo: " << boolalpha << values.undo() << endl;
     cout << "Current Value: " << values.getValue() << endl;
 
+    values.setValue(
+        "Four"
+    );
+
     cout << "\nAfter Redo: " << boolalpha << values.redo() << endl;
     cout << "Current Value: " << values.getValue();
 }
