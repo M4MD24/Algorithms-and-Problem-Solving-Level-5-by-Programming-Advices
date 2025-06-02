@@ -204,6 +204,15 @@ public:
         );
     }
 
+    void insertFirst(
+        const type &VALUE
+    ) {
+        insertAt(
+            0,
+            VALUE
+        );
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }

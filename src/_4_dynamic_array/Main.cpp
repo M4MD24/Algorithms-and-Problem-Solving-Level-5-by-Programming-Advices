@@ -143,4 +143,10 @@ int main() {
         80
     ) << endl;
     values.printValues();
+
+    cout << "\n■ Insert First:" << endl;
+    values.insertFirst(
+        90
+    );
+    values.printValues();
 }
