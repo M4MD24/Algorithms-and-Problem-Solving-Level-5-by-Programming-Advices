@@ -81,4 +81,10 @@ int main() {
     cout << "After Reverse Values:" << endl;
     values.reverse();
     values.printValues();
+
+    cout << "\n■ After Delete Item: " << endl;
+    values.deleteItem(
+        3
+    );
+    values.printValues();
 }

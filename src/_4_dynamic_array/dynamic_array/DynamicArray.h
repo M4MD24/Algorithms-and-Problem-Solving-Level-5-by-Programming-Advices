@@ -104,6 +104,18 @@ public:
             );
     }
 
+    void deleteItem(
+        const size_t &INDEX
+    ) {
+        if (INDEX >= size) {
+            cout << "Index out of range\n";
+            return;
+        }
+        for (size_t index = INDEX; index < size - 1; ++index)
+            originalValues[index] = originalValues[index + 1];
+        --size;
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }

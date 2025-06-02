@@ -58,3 +58,4 @@
    8. Clear Method
    9. Get Item Method
    10. Reverse
+   11. Delete Item
