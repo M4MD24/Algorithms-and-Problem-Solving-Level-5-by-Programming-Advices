@@ -57,3 +57,4 @@
    7. Resize Method
    8. Clear Method
    9. Get Item Method
+   10. Reverse

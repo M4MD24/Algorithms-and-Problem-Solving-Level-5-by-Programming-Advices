@@ -74,4 +74,11 @@ int main() {
     cout << values.getItem(
         3
     ) << endl;
+
+    cout << "\n■ Reverse:" << endl;
+    cout << "Before Reverse Values:" << endl;
+    values.printValues();
+    cout << "After Reverse Values:" << endl;
+    values.reverse();
+    values.printValues();
 }

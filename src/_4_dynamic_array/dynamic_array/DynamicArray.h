@@ -96,6 +96,14 @@ public:
         return originalValues[INDEX];
     }
 
+    void reverse() {
+        for (size_t index = 0; index < size / 2; ++index)
+            swap(
+                originalValues[index],
+                originalValues[size - 1 - index]
+            );
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }
