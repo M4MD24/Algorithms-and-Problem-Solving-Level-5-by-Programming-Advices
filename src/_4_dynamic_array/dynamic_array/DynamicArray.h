@@ -162,6 +162,28 @@ public:
         }
     }
 
+    bool insertAt(
+        const size_t &TARGET_INDEX,
+        const type &VALUE
+    ) {
+        if (TARGET_INDEX > size) {
+            cout << "Index out of range.\n";
+            return false;
+        }
+
+        if (size == capacity)
+            resize(
+                capacity * 2
+            );
+
+        for (size_t index = size; index > TARGET_INDEX; --index)
+            originalValues[index] = originalValues[index - 1];
+
+        originalValues[TARGET_INDEX] = VALUE;
+        ++size;
+        return true;
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }

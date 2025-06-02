@@ -48,18 +48,19 @@
     12. Insert After Method
     13. Insert Last Method
 4. [Dynamic Array](src/_4_dynamic_array)
-   1. Set Item Method
-   2. Print Values Method
-   3. Is Empty Method
-   4. Get Size Method
-   5. Get Capacity Method
-   6. Shrink to Fit Method
-   7. Resize Method
-   8. Clear Method
-   9. Get Item Method
-   10. Reverse
-   11. Delete Item
-   12. Delete First
-   13. Delete Last
-   14. Find Item
-   15. Find Item by Value
+    1. Set Item Method
+    2. Print Values Method
+    3. Is Empty Method
+    4. Get Size Method
+    5. Get Capacity Method
+    6. Shrink to Fit Method
+    7. Resize Method
+    8. Clear Method
+    9. Get Item Method
+    10. Reverse Method
+    11. Delete Item Method
+    12. Delete First Method
+    13. Delete Last Method
+    14. Find Item Method
+    15. Find Item by Value Method
+    16. Insert At Method

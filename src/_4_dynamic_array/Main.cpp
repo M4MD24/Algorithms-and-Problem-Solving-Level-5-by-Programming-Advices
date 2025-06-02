@@ -103,4 +103,32 @@ int main() {
         30
     ) << endl;
     values.printValues();
+
+    cout << "\n■ Insert At: ";
+    values.setItem(
+        0,
+        10
+    );
+    values.setItem(
+        1,
+        20
+    );
+    values.setItem(
+        2,
+        30
+    );
+    values.setItem(
+        3,
+        40
+    );
+    values.setItem(
+        4,
+        50
+    );
+
+    cout << values.insertAt(
+        2,
+        60
+    ) << endl;
+    values.printValues();
 }
