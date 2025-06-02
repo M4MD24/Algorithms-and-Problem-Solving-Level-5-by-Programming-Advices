@@ -61,3 +61,4 @@
    11. Delete Item
    12. Delete First
    13. Delete Last
+   14. Find Item

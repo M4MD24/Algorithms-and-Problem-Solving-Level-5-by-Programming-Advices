@@ -134,6 +134,16 @@ public:
         --size;
     }
 
+    size_t findItem(
+        const type &ITEM
+    ) {
+        for (size_t index = 0; index < size; ++index)
+            if (originalValues[index] == ITEM)
+                return index;
+        cout << "Can't Find.\n";
+        return type();
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }
