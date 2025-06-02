@@ -131,4 +131,10 @@ int main() {
         60
     ) << endl;
     values.printValues();
+
+    cout << "\n■ Insert After: " << values.insertAfter(
+        2,
+        70
+    ) << endl;
+    values.printValues();
 }

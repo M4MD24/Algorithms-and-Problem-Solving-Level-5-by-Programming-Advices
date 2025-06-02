@@ -184,6 +184,16 @@ public:
         return true;
     }
 
+    bool insertAfter(
+        const size_t &PREVIOUS_INDEX,
+        const type &VALUE
+    ) {
+        return insertAt(
+            PREVIOUS_INDEX + 1,
+            VALUE
+        );
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }
