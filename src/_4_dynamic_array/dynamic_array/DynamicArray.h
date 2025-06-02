@@ -194,6 +194,16 @@ public:
         );
     }
 
+    bool insertBefore(
+        const size_t &NEXT_INDEX,
+        const type &VALUE
+    ) {
+        return insertAt(
+            NEXT_INDEX - 1,
+            VALUE
+        );
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }

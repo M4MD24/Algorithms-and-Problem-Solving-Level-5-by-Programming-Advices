@@ -65,3 +65,4 @@
     15. Find Item by Value Method
     16. Insert At Method
     17. Insert After Method
+    18. Insert Before Method

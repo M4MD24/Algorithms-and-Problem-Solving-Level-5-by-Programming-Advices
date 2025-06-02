@@ -137,4 +137,10 @@ int main() {
         70
     ) << endl;
     values.printValues();
+
+    cout << "\n■ Insert Before: " << values.insertBefore(
+        2,
+        80
+    ) << endl;
+    values.printValues();
 }
