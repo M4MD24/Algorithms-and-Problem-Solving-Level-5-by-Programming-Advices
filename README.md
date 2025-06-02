@@ -60,3 +60,4 @@
    10. Reverse
    11. Delete Item
    12. Delete First
+   13. Delete Last

@@ -126,6 +126,14 @@ public:
         --size;
     }
 
+    void deleteLast() {
+        if (size == 0) {
+            cout << "Can't Delete Last.\n";
+            return;
+        }
+        --size;
+    }
+
     ~DynamicArray() {
         delete[] originalValues;
     }

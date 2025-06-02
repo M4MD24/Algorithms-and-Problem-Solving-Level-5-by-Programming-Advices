@@ -91,4 +91,8 @@ int main() {
     cout << "\n■ After Delete First: " << endl;
     values.deleteFirst();
     values.printValues();
+
+    cout << "\n■ After Delete Last: " << endl;
+    values.deleteLast();
+    values.printValues();
 }
