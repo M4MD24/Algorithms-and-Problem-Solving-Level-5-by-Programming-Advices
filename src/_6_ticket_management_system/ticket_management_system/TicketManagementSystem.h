@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../data_structures/queue/Queue.h"
+#include "../libraries/Utils.h"
 #include"../libraries/datetime/Date.h"
 #include"../libraries/datetime/Time.h"
 #include "models/Ticket.h"
@@ -12,19 +13,15 @@ class TicketManagementSystem {
     string prefix;
     unsigned short servedClients = 0;
     unsigned short waitingClients = 0;
-    unsigned short averagingTimeInMinutes = 0;
-
-    static string getSystemDateTime() {
-        return Date().getDateText() + ' ' + Time().getTimeText();
-    }
+    unsigned short timeRemainingAverageInMinutes = 0;
 
 public:
     TicketManagementSystem(
         const string &PREFIX,
-        const size_t &AVERAGING_TIME_IN_MINUTES
+        const size_t &TIME_REMAINING_AVERAGE_IN_MINUTES
     ) {
         prefix = PREFIX;
-        averagingTimeInMinutes = AVERAGING_TIME_IN_MINUTES;
+        timeRemainingAverageInMinutes = TIME_REMAINING_AVERAGE_IN_MINUTES;
     }
 
     string getPrefix() {
@@ -43,8 +40,8 @@ public:
         return waitingClients;
     }
 
-    unsigned short getAveragingTimeInMinutes() {
-        return averagingTimeInMinutes;
+    unsigned short getTimeRemainingAverageTimeInMinutes() {
+        return timeRemainingAverageInMinutes;
     }
 
     void issueTicket() {
@@ -54,14 +51,16 @@ public:
                 prefix,
                 static_cast<unsigned short>(NUMBER),
                 getTotalTickets(),
-                getAveragingTimeInMinutes()
+                static_cast<unsigned short>(getTimeRemainingAverageTimeInMinutes() * getTotalTickets())
             }
         );
     }
 
     void printInformation() {
-        cout << "~{Information}~" << '\n'
-            << "Prefix: " << getPrefix() << '\n'
+        Utils::printTitle(
+            "Information"
+        );
+        cout << "Prefix: " << getPrefix() << '\n'
             << "Total Tickets: " << getTotalTickets() << '\n'
             << "Served Clients: " << getServedClients() << '\n'
             << "Waiting Clients: " << getWaitingClients() << '\n'
@@ -69,7 +68,9 @@ public:
     }
 
     void printTicketLine() {
-        cout << "~{Client Line}~" << '\n';
+        Utils::printTitle(
+            "Client Line"
+        );
         const size_t TICKET_SIZE = tickets.size();
         for (size_t index = 0; index < TICKET_SIZE; ++index) {
             cout << tickets.getItem(
@@ -78,5 +79,23 @@ public:
             if (index < TICKET_SIZE - 1)
                 cout << " <-- ";
         }
+        cout << '\n' << endl;
     }
+
+    void printTickets() {
+        Utils::printTitle(
+            "Tickets"
+        );
+        const size_t TICKET_SIZE = tickets.size();
+        for (size_t index = 0; index < TICKET_SIZE; ++index) {
+            tickets.getItem(
+                index
+            ).printTicket();
+            if (index < TICKET_SIZE - 1)
+                Utils::printLine();
+        }
+        cout << endl;
+    }
+
+    void serveClient() {}
 };

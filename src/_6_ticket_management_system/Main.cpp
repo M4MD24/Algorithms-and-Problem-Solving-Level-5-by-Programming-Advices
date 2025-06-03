@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     auto ticketManagementSystem = TicketManagementSystem(
-        "MS",
+        "MST",
         10
     );
 
@@ -17,4 +17,8 @@ int main() {
     ticketManagementSystem.printInformation();
 
     ticketManagementSystem.printTicketLine();
+
+    ticketManagementSystem.printTickets();
+
+    // ticketManagementSystem.serveClient();
 }
