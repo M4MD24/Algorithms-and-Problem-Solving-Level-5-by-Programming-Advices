@@ -76,3 +76,5 @@
 6. [Ticket Management System](src/_6_ticket_management_system)
     1. Libraries
         1. Date
+    2. Data Structures
+        1. Queue
