@@ -7,12 +7,29 @@
 using namespace std;
 
 class TicketManagementSystem {
-    Queue<Ticket> tickets;
+    Queue<Ticket> waitingClients;
+    Queue<Ticket> servedClients;
     string prefix;
     unsigned short totalTickets = 0;
-    unsigned short servedClients = 0;
-    unsigned short waitingClients = 0;
     unsigned short timeRemainingAverageInMinutes = 0;
+
+    void printTickets(
+        const string &TITLE,
+        Queue<Ticket> tickets
+    ) {
+        Utils::printTitle(
+            TITLE
+        );
+        const size_t TICKET_SIZE = tickets.size();
+        for (size_t index = 0; index < TICKET_SIZE; ++index) {
+            tickets.getItem(
+                index
+            ).printTicket();
+            if (index < TICKET_SIZE - 1)
+                Utils::printLine();
+        }
+        cout << endl;
+    }
 
 public:
     TicketManagementSystem(
@@ -32,24 +49,24 @@ public:
     }
 
     unsigned short getServedClients() {
-        return servedClients;
+        return servedClients.size();
     }
 
     unsigned short getWaitingClients() {
-        return tickets.size();
+        return waitingClients.size();
     }
 
-    unsigned short getTimeRemainingAverageTimeInMinutes() {
+    unsigned short getTimeRemainingAverageInMinutes() {
         return timeRemainingAverageInMinutes;
     }
 
     void issueTicket() {
-        tickets.enqueue(
+        waitingClients.enqueue(
             {
                 prefix,
                 static_cast<unsigned short>(getTotalTickets() + 1),
                 getTotalTickets(),
-                static_cast<unsigned short>(getTimeRemainingAverageTimeInMinutes() * getTotalTickets())
+                static_cast<unsigned short>(getTimeRemainingAverageInMinutes() * getTotalTickets())
             }
         );
         totalTickets++;
@@ -70,9 +87,9 @@ public:
         Utils::printTitle(
             "Client Line"
         );
-        const size_t TICKET_SIZE = tickets.size();
+        const size_t TICKET_SIZE = waitingClients.size();
         for (size_t index = 0; index < TICKET_SIZE; ++index) {
-            cout << tickets.getItem(
+            cout << waitingClients.getItem(
                 index
             ).getFullNumber();
             if (index < TICKET_SIZE - 1)
@@ -81,23 +98,24 @@ public:
         cout << '\n' << endl;
     }
 
-    void printTickets() {
-        Utils::printTitle(
-            "Tickets"
+    void printWaitingClients() {
+        printTickets(
+            "Waiting Clients",
+            waitingClients
         );
-        const size_t TICKET_SIZE = tickets.size();
-        for (size_t index = 0; index < TICKET_SIZE; ++index) {
-            tickets.getItem(
-                index
-            ).printTicket();
-            if (index < TICKET_SIZE - 1)
-                Utils::printLine();
-        }
-        cout << endl;
     }
 
     void serveClient() {
-        servedClients++;
-        tickets.dequeue();
+        servedClients.enqueue(
+            waitingClients.front()
+        );
+        waitingClients.dequeue();
+    }
+
+    void printServedClients() {
+        printTickets(
+            "Served Clients",
+            servedClients
+        );
     }
 };

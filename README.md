@@ -87,6 +87,8 @@
     4. Methods
         1. Issue Ticket
         2. Print Information
-        3. Print Ticket Line
-        4. Print Tickets
+        3. Print Waiting Client Line
+        4. Print All Tickets
         5. Serve Client
+        6. Print Served Clients
+        7. Print Waiting Clients

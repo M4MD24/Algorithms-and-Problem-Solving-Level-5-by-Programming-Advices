@@ -18,8 +18,11 @@ int main() {
 
     ticketManagementSystem.printTicketLine();
 
-    ticketManagementSystem.printTickets();
+    ticketManagementSystem.printWaitingClients();
 
     ticketManagementSystem.serveClient();
+    ticketManagementSystem.serveClient();
     ticketManagementSystem.printInformation();
+
+    ticketManagementSystem.printServedClients();
 }
