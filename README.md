@@ -78,7 +78,6 @@
         - DateTime
             - Date
             - Time
-            - Period
         - Utils
     - Data Structures
         - Queue
