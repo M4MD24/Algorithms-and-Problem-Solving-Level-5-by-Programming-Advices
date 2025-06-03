@@ -20,5 +20,6 @@ int main() {
 
     ticketManagementSystem.printTickets();
 
-    // ticketManagementSystem.serveClient();
+    ticketManagementSystem.serveClient();
+    ticketManagementSystem.printInformation();
 }

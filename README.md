@@ -89,3 +89,4 @@
         2. Print Information
         3. Print Ticket Line
         4. Print Tickets
+        5. Serve Client

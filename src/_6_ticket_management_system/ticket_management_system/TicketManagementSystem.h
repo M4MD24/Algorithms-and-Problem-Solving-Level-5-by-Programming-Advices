@@ -2,8 +2,6 @@
 
 #include "../data_structures/queue/Queue.h"
 #include "../libraries/Utils.h"
-#include"../libraries/datetime/Date.h"
-#include"../libraries/datetime/Time.h"
 #include "models/Ticket.h"
 
 using namespace std;
@@ -11,6 +9,7 @@ using namespace std;
 class TicketManagementSystem {
     Queue<Ticket> tickets;
     string prefix;
+    unsigned short totalTickets = 0;
     unsigned short servedClients = 0;
     unsigned short waitingClients = 0;
     unsigned short timeRemainingAverageInMinutes = 0;
@@ -29,7 +28,7 @@ public:
     }
 
     unsigned short getTotalTickets() {
-        return tickets.size();
+        return totalTickets;
     }
 
     unsigned short getServedClients() {
@@ -37,7 +36,7 @@ public:
     }
 
     unsigned short getWaitingClients() {
-        return waitingClients;
+        return tickets.size();
     }
 
     unsigned short getTimeRemainingAverageTimeInMinutes() {
@@ -45,15 +44,15 @@ public:
     }
 
     void issueTicket() {
-        const unsigned short NUMBER = getTotalTickets() + 1;
         tickets.enqueue(
             {
                 prefix,
-                static_cast<unsigned short>(NUMBER),
+                static_cast<unsigned short>(getTotalTickets() + 1),
                 getTotalTickets(),
                 static_cast<unsigned short>(getTimeRemainingAverageTimeInMinutes() * getTotalTickets())
             }
         );
+        totalTickets++;
     }
 
     void printInformation() {
@@ -97,5 +96,8 @@ public:
         cout << endl;
     }
 
-    void serveClient() {}
+    void serveClient() {
+        servedClients++;
+        tickets.dequeue();
+    }
 };

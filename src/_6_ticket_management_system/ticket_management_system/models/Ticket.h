@@ -2,6 +2,9 @@
 
 #include <string>
 
+#include "../../libraries/datetime/Date.h"
+#include "../../libraries/datetime/Time.h"
+
 using namespace std;
 
 class Ticket {
