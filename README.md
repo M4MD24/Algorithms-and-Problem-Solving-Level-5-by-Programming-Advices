@@ -14,9 +14,9 @@
     11. Is Empty Method
     12. Clear Method
     13. Reverse Method
-    14. Get Node by Index
-    15. Get Item by Index
-    16. Update Item by Index
+    14. Get Node by Index Method
+    15. Get Item by Index Method
+    16. Update Item by Index Method
     17. Insert Value After by Index Method
 2. [Queue Data Structure](src/_2_queue_data_structure)
     1. Enqueue Method
@@ -69,7 +69,7 @@
     19. Insert First Method
     20. Insert Last Method
 5. [Call Stack](src/_5_call_stack)
-    1. Set Value
-    2. Get Value
-    3. Undo
-    4. Redo
+    1. Set Value Method
+    2. Get Value Method
+    3. Undo Method
+    4. Redo Method
