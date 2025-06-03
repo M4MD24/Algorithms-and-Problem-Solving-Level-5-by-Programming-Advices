@@ -15,4 +15,6 @@ int main() {
     ticketManagementSystem.issueTicket();
 
     ticketManagementSystem.printInformation();
+
+    ticketManagementSystem.printTicketLine();
 }

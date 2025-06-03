@@ -67,4 +67,16 @@ public:
             << "Waiting Clients: " << getWaitingClients() << '\n'
             << endl;
     }
+
+    void printTicketLine() {
+        cout << "~{Client Line}~" << '\n';
+        const size_t TICKET_SIZE = tickets.size();
+        for (size_t index = 0; index < TICKET_SIZE; ++index) {
+            cout << tickets.getItem(
+                index
+            ).getFullNumber();
+            if (index < TICKET_SIZE - 1)
+                cout << " <-- ";
+        }
+    }
 };

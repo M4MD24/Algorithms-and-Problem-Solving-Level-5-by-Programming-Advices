@@ -86,3 +86,4 @@
     4. Methods
         1. Issue Ticket
         2. Print Information
+        3. Print Ticket Line
