@@ -73,3 +73,23 @@
     2. Get Value Method
     3. Undo Method
     4. Redo Method
+6. [Ticket Management System](src/_6_ticket_management_system)
+    1. Libraries
+        1. DateTime
+            1. Date
+            2. Time
+            3. Period
+        2. Utils
+    2. Data Structures
+        1. Queue
+    3. Models
+        1. Ticket
+    4. Methods
+        1. Issue Ticket
+        2. Print Information
+        3. Print Waiting Client Line
+        4. Print All Tickets
+        5. Serve Client
+        6. Print Served Clients
+        7. Print Waiting Clients
+        8. Who is Next
