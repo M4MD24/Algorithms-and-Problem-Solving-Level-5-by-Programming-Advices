@@ -81,3 +81,8 @@
             3. Period
     2. Data Structures
         1. Queue
+    3. Models
+       1. Ticket
+    4. Methods
+        1. Issue Ticket
+        2. Print Information
