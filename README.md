@@ -73,3 +73,4 @@
     2. Get Value
     3. Undo
     4. Redo
+6. [Ticket Management System](src/_6_ticket_management_system)
