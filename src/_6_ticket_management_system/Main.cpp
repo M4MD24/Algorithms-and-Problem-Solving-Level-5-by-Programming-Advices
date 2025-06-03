@@ -25,4 +25,6 @@ int main() {
     ticketManagementSystem.printInformation();
 
     ticketManagementSystem.printServedClients();
+
+    cout << "Who is Next: " << ticketManagementSystem.whoIsNext();
 }

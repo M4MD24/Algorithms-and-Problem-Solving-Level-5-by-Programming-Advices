@@ -118,4 +118,8 @@ public:
             servedClients
         );
     }
+
+    string whoIsNext() {
+        return waitingClients.front().getFullNumber();
+    }
 };
