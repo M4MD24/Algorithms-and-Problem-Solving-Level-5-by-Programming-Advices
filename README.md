@@ -75,6 +75,9 @@
     4. Redo
 6. [Ticket Management System](src/_6_ticket_management_system)
     1. Libraries
-        1. Date
+        1. DateTime
+            1. Date
+            2. Time
+            3. Period
     2. Data Structures
         1. Queue
